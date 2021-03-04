@@ -4,7 +4,9 @@ class TwitterMessage extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      message: ''
+    };
   }
 
   makeChange = event => {
@@ -19,7 +21,7 @@ class TwitterMessage extends React.Component {
       <div>
         <strong>Your message:</strong>
         <input type="text" name="message" id="message" value={this.state.message} onChange={this.makeChange} />
-        <p>{this.charsLeft}</p>
+        <p>{charsLeft}</p>
       </div>
     );
   }
